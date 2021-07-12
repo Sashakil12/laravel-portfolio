@@ -1,143 +1,72 @@
-@extends('layouts.app')
+{{-- @extends('layouts.app')
 @section('content')
     <!-- Hero background & content on top of hero background -->
     <div id="hero-container">
         <div class="hero-wrapper">
-            <h1>Multi-Disciplinary <br> <span class="line">Designer</span> <span class="orange-txt">Developer</span></h1>
+            <h1>About <br> <span class="line">Page</span> <span class="orange-txt">Developer</span></h1>
 
-            <div class="btn-wrapper">
-                <a href="">Let's connect</a>
-                <a href="">View Portfolio</a>
-            </div>
-        </div>
-    </div>
-
-    <!-- 4 grid layout skills on homepage -->
-    <!-- Every div is a grid item -->
-    <div class="container-grid-4">
-        <div>
-            <img src="img/icon-box.jpg" alt="">
-            <h2>
-                Web Design
-            </h2>
-            <p>
-                Lorem ipsum dolor sit amet consectetur!
-            </p>
-        </div>
-
-        <div>
-            <img src="img/icon-box.jpg" alt="">
-            <h2>
-                Web Development
-            </h2>
-            <p>
-                Lorem ipsum dolor sit amet consectetur!
-            </p>
-        </div>
-
-        <div>
-            <img src="img/icon-box.jpg" alt="">
-            <h2>
-                Product Design
-            </h2>
-            <p>
-                Lorem ipsum dolor sit amet consectetur!
-            </p>
-        </div>
-
-        <div>
-            <img src="img/icon-box.jpg" alt="">
-            <h2>
-                Creative Thinker
-            </h2>
-            <p>
-                Lorem ipsum dolor sit amet consectetur!
-            </p>
-        </div>
-    </div>
-
-    <div class="header-section">
-        <h2 class="dark big">Team</h2>
         
-        <hr>
-    </div>
 
-    <!-- Meet the team section -->
-    <div class="container-grid-2">
-        <div>
-            <img class="img-team" src="img/team-section-home.jpg" alt="">
-        </div>
-        <div>
-            <h2>
-                Who we are
-            </h2>
-
-            <h3 class="orange-txt">
-                Meet Our Team
-            </h3>
-
-            <p>
-                Whether you require distribution or fulfillment, defined freight forwarding, or a complete supply chain solution, we are here for you.
-            </p>
-            
-            <div class="btn-wrapper">
-                <a href="">About</a>
-            </div>
         </div>
     </div>
 
-    <div class="header-section">
-        <h2 class="dark big">Skills</h2>
 
-        <hr>
-    </div>
+@endsection --}}
 
-    <!-- Section of skills -->
-    <div class="section-why-us">
-        <div>
-            <i class="fas fa-code-branch icon-why-us"></i>            
-            <h2>
-                Quality Control
-            </h2>
-            <p>
-                Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-            </p>
-        </div>
+{{-- //control structures --}}
+{{-- @[structure] --}}
+{{-- inside we can write anything we want --}}
+{{-- div, h1, h2, h3 etc --}}
+{{-- @[endstructure] --}}
+{{-- 
+@if (5>10)
+    <p>5 is smaller than 10</p>
+@elseif (5<10)
+    <p>5 is indeed smaller than 10</p>
 
-        <div class="middle">
-            <h2>
-                <img src="img/icon-box.jpg" alt="">
-            </h2>
-        </div>
+@endif
 
-        <div>
-            <i class="far fa-keyboard icon-why-us"></i>   
-            <h2>
-                Optional Maintenance
-            </h2>
-            <p>
-                Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-            </p>
-        </div>
+@unless (empty($name))
+    <h2>Name is not empty</h2>
+
+@endunless
+
+@empty($name)
+<h2>Name is empty</h2>
+@endempty
+
+@isset($name)
+    <h2>Name is available!</h2>
+@endisset
+
+@switch($name)
+    @case('dary')
+        <h2>Name is Dary</h2>
+        @break
+    @case('michael')
+        <h2>Name is michael</h2>
+        @break
+    @case('Shakil')
+        <h2>Name is Shakil</h2>
+    @break
+    @default
+        <h2>Name is no match</h2>
         
-        <div>
-            <i class="fab fa-google icon-why-us"></i>            
-            <h2>
-                Search Engine Friendly
-            </h2>
-            <p>
-                Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-            </p>
-        </div>
-        
-        <div>
-            <i class="fas fa-globe icon-why-us"></i>            
-            <h2>
-                Web Master Tools
-            </h2>
-            <p>
-                Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-            </p>
-        </div>
-    </div>
-@endsection
+@endswitch
+
+@for ($i=0; $i<10; $i++)
+        <h2>The number is {{ $i }}</h2>
+@endfor --}}
+
+{{-- @foreach ($names as $char )
+    <h2>The name is {{ $char}} </h2>
+@endforeach --}}
+
+@forelse ($names as $name)
+    <h2>The name is {{ $name }} </h2>    
+    @empty
+    <h2>There are no names</h2>
+
+    
+@endforelse
+
